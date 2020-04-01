@@ -186,10 +186,6 @@
           </p>
         </li>
       </ul>
-      <!--
-      PROXY SETTINGS URL AND KEY
-      --------------
-		  This feature is currently not finished.
 			<ul>
 				<li>
 					<label for="url">URL</label>
@@ -200,7 +196,6 @@
 					<input id="key" type="password" v-model="settings.PROXY_KEY" :disabled="!settings.PROXY_ENABLED" @change="applySetting('PROXY_KEY', $event)">
 				</li>
 			</ul>
-      -->
     </pw-section>
   </div>
 </template>
