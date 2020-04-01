@@ -1,6 +1,10 @@
 import axios from "axios"
 
 const axiosWithProxy = async (req, { state }) => {
+  var proxyAuthToken = state.postwoman.settings.PROXY_URL || "";
+  if(proxyAuthToken) {
+    req['AccessToken'] = proxyAuthToken;
+  }
   const { data } = await axios.post(
     state.postwoman.settings.PROXY_URL || "https://postwoman.apollosoftware.xyz/",
     req
