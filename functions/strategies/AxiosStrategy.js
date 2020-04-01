@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const axiosWithProxy = async (req, { state }) => {
-  var proxyAuthToken = state.postwoman.settings.PROXY_URL || "";
+  var proxyAuthToken = state.postwoman.settings.PROXY_KEY || "";
   if(proxyAuthToken) {
     req['AccessToken'] = proxyAuthToken;
   }
